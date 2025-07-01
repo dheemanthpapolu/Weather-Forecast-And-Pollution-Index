@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather & Pollution App</title>
+
+  <!-- Style -->
+  <link rel="stylesheet" href="./assets/style/main.css" />
+
+  <!-- Font Awesome (optional icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <header>
+      <h1>Weather & Pollution Tracker</h1>
+
+      <div class="search-controls">
+        <input type="text" id="cityInput" placeholder="Enter city name..." />
+        <button id="searchBtn">Search</button>
+        <button id="useLocationBtn">📍 Use My Location</button>
+      </div>
+
+      <div class="top-right-controls">
+        <button id="toggleUnits">🌡 Use °F</button>
+        <button id="toggleTheme">🌙 Dark Mode</button>
+      </div>
+    </header>
+
+    <!-- Status Message -->
+    <div id="status" class="status-message"></div>
+
+    <!-- Weather Section -->
+    <section id="weatherSection">
+      <h2>Current Weather</h2>
+      <div id="weatherCard" class="card"></div>
+    </section>
+
+    <!-- Forecast Section -->
+    <section id="forecastSection">
+      <h2>7-Day Forecast</h2>
+      <div id="forecastGrid" class="forecast-grid"></div>
+    </section>
+
+    <!-- Temperature Chart Section -->
+    <canvas id="tempChart" height="100"></canvas>
+
+    <!-- Pollution Section -->
+    <section id="pollutionSection">
+      <h2>Air Quality Index</h2>
+      <div id="aqiCard" class="card"></div>
+    </section>
+
+    <!-- Optional: Trend Chart -->
+    <section id="pollutionTrendSection" style="display: none;">
+      <h2>Pollution Trend</h2>
+      <canvas id="pollutionChart" width="400" height="200"></canvas>
+    </section>
+
+  </div>
+
+  <!-- Script -->
+  <script type="module" src="./js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
